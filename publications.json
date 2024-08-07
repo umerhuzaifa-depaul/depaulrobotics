@@ -1,0 +1,16 @@
+{
+  "publications": [
+    {
+      "id": "1",
+      "title": "RRT*-based path planning for continuum arms",
+      "description": "Continuum arms are bio-inspired devices that exhibit continuous, deformation. Rapidly-exploring random trees (RRT) is a traditional approach for performing efficient path planning...",
+      "image": "images/post/post_umer.png"
+    },
+    {
+      "id": "2",
+      "title": "Another Publication",
+      "description": "Description of another publication...",
+      "image": "images/post/post_plan.png"
+    }
+  ]
+}
