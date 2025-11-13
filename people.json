@@ -1,0 +1,18 @@
+{
+  "people": [
+    {
+      "name": "Dr. Jane Doe",
+      "title": "Professor",
+      "email": "jane.doe@depaul.edu",
+      "photo": "people_images/person1.jpg",
+      "size": "big"
+    },
+    {
+      "name": "John Smith",
+      "title": "Graduate Researcher",
+      "email": "john.smith@depaul.edu",
+      "photo": "people_images/person1.jpg",
+      "size": "small"
+    }
+  ]
+}

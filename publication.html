@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Publication Details</title>
+    <title>DePaul Robotics - Publication</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <link rel="shortcut icon" href="site_images/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="site_images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,7 +16,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light px-0">
             <a class="navbar-brand order-1 py-0" href="index.html">
-                <img loading="prelaod" decoding="async" class="img-fluid" src="images/logo.png" alt="DePaul Robotics">
+                <img loading="preload" decoding="async" class="img-fluid" src="site_images/logo.png" alt="DePaul Robotics">
             </a>
             <div class="navbar-actions order-3 ml-0 ml-md-4">
                 <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-toggle="collapse"
@@ -23,15 +25,9 @@
             </div>
             <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
                 <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="about.html">About DePaul Robotics</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="#" role="button"
-                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Publications
-                    </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="about.html">About DePaul Robotics</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,7 +40,7 @@
             <div class="row">
                 <div class="col-12">
                     <div id="publication-details" class="publication-details">
-                        <!-- Publication details will be injected here by JavaScript -->
+                        <!--Main.js will add publication details here-->
                     </div>
                 </div>
             </div>
@@ -57,43 +53,21 @@
         <div class="row">
             <div class="col-lg-10 mx-auto text-center">
                 <a class="d-inline-block mb-4 pb-2" href="index.html">
-                    <img loading="prelaod" decoding="async" class="img-fluid" src="images/logo.png" alt="DePaul Robotics">
+                    <img loading="preload" decoding="async" class="img-fluid" src="site_images/logo.png" alt="DePaul Robotics">
                 </a>
                 <ul class="p-0 d-flex navbar-footer mb-0 list-unstyled">
                     <li class="nav-item my-0"> <a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item my-0"> <a class="nav-link" href="article.html">Elements</a></li>
-                    <li class="nav-item my-0"> <a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
-                    <li class="nav-item my-0"> <a class="nav-link" href="terms-conditions.html">Terms Conditions</a></li>
+                    <li class="nav-item my-0"> <a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item my-0"> <a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item my-0"> <a class="nav-link" href="404.html">404 Page</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="copyright bg-dark content">Designed &amp; Developed By <a href="https://themefisher.com/">Themefisher</a></div>
 </footer>
 
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const publicationId = urlParams.get('id');
-
-        fetch('publications.json')
-            .then(response => response.json())
-            .then(data => {
-                const publication = data.publications.find(pub => pub.id === publicationId);
-                if (publication) {
-                    const publicationDetails = document.getElementById('publication-details');
-                    publicationDetails.innerHTML = `
-              <h1>${publication.title}</h1>
-              <img src="${publication.image}" alt="${publication.title}">
-              <p>${publication.description}</p>
-              <p>Full details about the publication...</p>
-            `;
-                }
-            });
-    });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
